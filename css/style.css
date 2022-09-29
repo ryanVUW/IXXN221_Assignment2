@@ -1,0 +1,89 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: blueviolet;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(5, auto) repeat(3, 20%) 10%;
+    grid-template-areas:
+        "header"
+        "nav1"
+        "nav2"
+        "nav3"
+        "nav4"
+        "section1"
+        "section2"
+        "section3"
+        "footer";
+}
+
+header{
+    grid-area: header;
+    background-color: orange;
+}
+
+nav:nth-of-type(1){
+    grid-area: nav1;
+    background-color: salmon;
+}
+
+nav:nth-of-type(2){
+    grid-area: nav2;
+    background-color: red;
+}
+
+nav:nth-of-type(3){
+    grid-area: nav3;
+    background-color: salmon;
+}
+
+nav:nth-of-type(4){
+    grid-area: nav4;
+    background-color: red;
+}
+
+section:nth-of-type(1){
+    grid-area: section1;
+    background-color: yellow;
+}
+
+section:nth-of-type(2){
+    grid-area: section2;
+    background-color: yellowgreen;
+}
+
+section:nth-of-type(3){
+    grid-area: section3;
+    background-color: green;
+}
+
+footer{
+    grid-area: footer;
+    background-color: cyan;
+}
+
+
+@media screen and (min-width: 768px) {
+    body{
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: 25% 15% auto auto;
+        grid-template-areas:
+            "header header header header"
+            "nav1 nav2 nav3 nav4"
+            "section1 section1 section2 section2"
+            "section3 section3 footer footer"
+        
+    }    
+}
+
+@media screen and (min-width: 1024px) {
+    body{
+        grid-template-columns: 25% repeat(4, auto);
+        grid-template-rows: 25% auto 20%;
+        grid-template-areas:
+            "header nav1 nav2 nav3 nav4"
+            "section1 section2 section2 section3 section3"
+            "footer footer footer footer footer";
+    }
+}
