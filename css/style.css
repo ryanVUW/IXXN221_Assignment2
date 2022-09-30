@@ -4,33 +4,26 @@ body {
     background-color: blueviolet;
     height: 100vh;
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: repeat(5, auto) repeat(3, 20%) 10%;
+    grid-template-columns: auto 15% 15%; /* 3 */
+    grid-template-rows: 10% 5% 50% repeat(2, auto); /* 5 */
     grid-template-areas:
-        "header"
-        "nav1"
-        "nav2"
-        "nav3"
-        "nav4"
-        "section1"
-        "section2"
-        "section3"
-        "footer";
+        "nav1 nav2 nav3"
+        "nav4 nav4 nav4"
+        "section1 section1 section1"
+        "section2 section2 section2"
+        "section3 section3 section3";
 }
 
-header{
-    grid-area: header;
-    background-color: orange;
-}
+
 
 nav:nth-of-type(1){
     grid-area: nav1;
-    background-color: salmon;
+    background-color:  orange;
 }
 
 nav:nth-of-type(2){
     grid-area: nav2;
-    background-color: red;
+    background-color: pink;
 }
 
 nav:nth-of-type(3){
@@ -58,32 +51,14 @@ section:nth-of-type(3){
     background-color: green;
 }
 
-footer{
-    grid-area: footer;
-    background-color: cyan;
-}
-
-
-@media screen and (min-width: 768px) {
-    body{
-        grid-template-columns: repeat(4, auto);
-        grid-template-rows: 25% 15% auto auto;
-        grid-template-areas:
-            "header header header header"
-            "nav1 nav2 nav3 nav4"
-            "section1 section1 section2 section2"
-            "section3 section3 footer footer"
-        
-    }    
-}
 
 @media screen and (min-width: 1024px) {
     body{
-        grid-template-columns: 25% repeat(4, auto);
-        grid-template-rows: 25% auto 20%;
+        grid-template-columns:  repeat(2, 10%) repeat(2, auto) repeat(2, 10%); /* 6 */
+        grid-template-rows: 10% auto 20%;  /* 3 */
         grid-template-areas:
-            "header nav1 nav2 nav3 nav4"
-            "section1 section2 section2 section3 section3"
-            "footer footer footer footer footer";
+            "nav1 nav1 nav1 nav4 nav2 nav3"
+            "section1 section1 section1 section1 section1 section1"
+            "section2 section2 section2 section3 section3 section3";
     }
 }
