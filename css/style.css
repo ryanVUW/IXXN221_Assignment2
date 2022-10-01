@@ -1,7 +1,7 @@
-body {
+#home {
     margin: 0px;
     padding: 0px;
-    background-color: blueviolet;
+    background-color: #FDFDFD;
     height: 100vh;
     display: grid;
     grid-template-columns: auto 15% 15%; /* 3 */
@@ -14,7 +14,72 @@ body {
         "section3 section3 section3";
 }
 
+#productpage {
+    margin: 0px;
+    padding: 0px;
+    background-color: #FDFDFD;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto 15% 15%; /* 3 */
+    grid-template-rows: 10% 5% 50% 40% 40%; /* 5 */
+    grid-template-areas:
+        "nav1 nav2 nav3"
+        "nav4 nav4 nav4"
+        "section1 section1 section1"
+        "section2 section2 section2"
+        "section3 section3 section3";
+}
 
+#recomm_desk{
+    margin: 0px;
+    padding: 0px;
+    background-color: #FDFDFD;
+    height: 100vh;
+    display: grid;
+    grid-template-columns:  repeat(2, 10%) repeat(4, auto) repeat(2, 10%); /* 8 */
+    grid-template-rows: 10% 10% repeat(3, 40%);  /* 5 */
+    grid-template-areas:
+        "nav1 nav1 nav1 nav1 nav4 nav4 nav2 nav3"
+        "space1 space1 section1 section1 section2 section2 space2 space2"
+        "space1 space1 section3 section4 section9 section10 space2 space2" 
+        "space1 space1 section5 section6 section11 section12 space2 space2"
+        "space1 space1 section7 section8 section13 section14 space2 space2";
+}
+
+#recomm_mobile{
+    margin: 0px;
+    padding: 0px;
+    background-color: #FDFDFD;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto 15% 15%; /* 3 */
+    grid-template-rows: 10% 5% repeat(2, auto); /* 4 */
+    grid-template-areas:
+        "nav1 nav2 nav3"
+        "nav4 nav4 nav4"
+        "section1 section1 section1"
+        "section2 section2 section2";
+}
+
+#recomm_list_mobile{
+    margin: 0px;
+    padding: 0px;
+    background-color: #FDFDFD;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto 15% 15%; /* 3 */
+    grid-template-rows: 10% 5% 10% repeat(6, 50%); /* 9 */
+    grid-template-areas:
+        "nav1 nav2 nav3"
+        "nav4 nav4 nav4"
+        "section1 section1 section1"
+        "section2 section2 section2"
+        "section3 section3 section3"
+        "section4 section4 section4"
+        "section5 section5 section5"
+        "section6 section6 section6"
+        "section7 section7 section7";
+}
 
 nav:nth-of-type(1){
     grid-area: nav1;
@@ -51,14 +116,81 @@ section:nth-of-type(3){
     background-color: green;
 }
 
+section:nth-of-type(4){
+    grid-area: section4;
+    background-color: orange;
+}
+
+section:nth-of-type(5){
+    grid-area: section5;
+    background-color: orangered;
+}
+
+section:nth-of-type(6){
+    grid-area: section6;
+    background-color: tomato;
+}
+
+section:nth-of-type(7){
+    grid-area: section7;
+    background-color: indianred;
+}
+
+section:nth-of-type(8){
+    grid-area: section8;
+    background-color: coral;
+}
+
+section:nth-of-type(9){
+    grid-area: section9;
+    background-color: pink;
+}
+
+section:nth-of-type(10){
+    grid-area: section10;
+    background-color: orchid;
+}
+
+section:nth-of-type(11){
+    grid-area: section11;
+    background-color: magenta;
+}
+
+section:nth-of-type(12){
+    grid-area: section12;
+    background-color: purple;
+}
+
+section:nth-of-type(13){
+    grid-area: section13;
+    background-color: darkorchid;
+}
+
+section:nth-of-type(14){
+    grid-area: section14;
+    background-color: plum;
+}
+
+
 
 @media screen and (min-width: 1024px) {
-    body{
-        grid-template-columns:  repeat(2, 10%) repeat(2, auto) repeat(2, 10%); /* 6 */
+    #home{
+        grid-template-columns:  repeat(2, 10%) repeat(2, 30%) repeat(2, 10%); /* 6 */
         grid-template-rows: 10% auto 20%;  /* 3 */
         grid-template-areas:
             "nav1 nav1 nav1 nav4 nav2 nav3"
-            "section1 section1 section1 section1 section1 section1"
-            "section2 section2 section2 section3 section3 section3";
+            "space1 space1 section1 section1 space2 space2"
+            "space1 space1 section2 section3 space2 space2";
     }
+
+    #productpage{
+        grid-template-columns:  repeat(2, 10%) repeat(2, 30%) repeat(2, 10%); /* 6 */
+        grid-template-rows: 10% 70% 40%;  /* 3 */
+        grid-template-areas:
+            "nav1 nav1 nav1 nav4 nav2 nav3"
+            "space1 space1 section1 section2 space2 space2"
+            "space1 space1 section3 section3 space2 space2";
+    }
+
+
 }
