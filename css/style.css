@@ -1,17 +1,56 @@
-#home {
+body {
     margin: 0px;
     padding: 0px;
-    background-color: #FDFDFD;
+    background-color: #D9D9D9;
     height: 100vh;
     display: grid;
-    grid-template-columns: auto 15% 15%; /* 3 */
-    grid-template-rows: 10% 5% 50% repeat(2, auto); /* 5 */
+    grid-template-columns: auto; /* 1 */
+    grid-template-rows: 128px auto; /* 2 */
+    grid-template-areas:
+        "header"
+        "main";
+}
+
+header{
+    
+    grid-area: header;
+    display: grid;
+    grid-template-columns: auto 72px 72px;
+    grid-template-rows: 72px auto;
     grid-template-areas:
         "nav1 nav2 nav3"
-        "nav4 nav4 nav4"
-        "section1 section1 section1"
-        "section2 section2 section2"
-        "section3 section3 section3";
+        "nav4 nav4 nav4";
+    background-color: #FDFDFD;
+}
+
+.home {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 60% auto auto;
+    grid-template-areas:
+        "section1"
+        "section2"
+        "section3";
+    background-color: #D9D9D9;
+}
+
+.display{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 90% auto;
+    grid-template-areas:
+        "img"
+        "div1";    
+}
+
+img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+    align-content: center;
 }
 
 #productpage {
@@ -174,13 +213,34 @@ section:nth-of-type(14){
 
 
 @media screen and (min-width: 1024px) {
-    #home{
-        grid-template-columns:  repeat(2, 10%) repeat(2, 30%) repeat(2, 10%); /* 6 */
-        grid-template-rows: 10% auto 20%;  /* 3 */
+    header{
+    
+        grid-area: header;
+        display: grid;
+        grid-template-columns: 20% 30% 30% repeat(2, 10%);
+        grid-template-rows: auto;
         grid-template-areas:
-            "nav1 nav1 nav1 nav4 nav2 nav3"
-            "space1 space1 section1 section1 space2 space2"
-            "space1 space1 section2 section3 space2 space2";
+            "nav1 nav1 nav4 nav2 nav3";
+        background-color: #FDFDFD;
+    }
+    
+    .home {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 20% 30% 30% 20%;
+        grid-template-rows: 80% auto;
+        grid-template-areas:
+            "space1 section1 section1 space2"
+            "space1 section2 section3 space2";
+    }
+    
+    .display{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 90% 80px;
+        grid-template-areas:
+            "img"
+            "div1";    
     }
 
     #productpage{
