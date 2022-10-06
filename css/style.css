@@ -56,6 +56,36 @@ header{
         "section3";    
 }
 
+.recomm {
+    padding: 16px;
+    padding-right: 32px;
+    grid-gap: 16px;
+    background-color: #FDFDFD;
+    display: grid;
+    grid-template-columns: 50% 50%; /* 2 */
+    grid-template-rows: 72px auto auto; /* 3 */
+    grid-template-areas:
+        "section1 section2"
+        "section3 section3"
+        "section4 section4";        
+}
+
+.list{
+    margin-bottom: 16px;
+    background-color: deeppink;
+    display: grid;
+    grid-template-columns: auto; /* 2 */
+    grid-template-rows: 50% 20% 40%; /* 2 */
+    grid-template-areas:
+        "img1"
+        "title1"
+        "desc1";   
+
+        justify-content: center;
+        align-items: flex-start;
+}
+
+
 
 img{
     display: flex;
@@ -233,10 +263,16 @@ section:nth-of-type(14){
     }
     
     .home {
+        margin: 0px;
+        padding: 0px;
+        padding-right: 72px;
+        padding-top: 64px;
+        padding-bottom: 64px;
+        gap: 24px;
         grid-area: main;
         display: grid;
         grid-template-columns: 20% 30% 30% 20%;
-        grid-template-rows: 80% auto;
+        grid-template-rows: 70% auto;
         grid-template-areas:
             "space1 section1 section1 space2"
             "space1 section2 section3 space2";
@@ -255,7 +291,7 @@ section:nth-of-type(14){
         margin: 0px;
         padding: 0px;
         padding-right: 72px;
-        padding-top: 64px;
+        padding-top: 32px;
         gap: 24px;
         
         background-color: #FDFDFD;
@@ -267,6 +303,35 @@ section:nth-of-type(14){
             "space1 section3 section3 space2"; 
     }
 
-
+    .recomm {
+        margin: 0px;
+        padding: 0px;
+        padding-right: 72px;
+        padding-top: 32px;
+        padding-bottom: 64px;
+        gap: 24px;
+        background-color: #FDFDFD;
+        display: grid;
+        grid-template-columns: 20% 30% 30% 20%;
+        grid-template-rows: 5% auto;
+        grid-template-areas:
+            "space1 section1 section2 space2"
+            "space1 section3 section4 space2";       
+    }
+    
+    .list{
+        margin-bottom: 16px;
+        background-color: deeppink;
+        display: grid;
+        grid-template-columns: auto; /* 2 */
+        grid-template-rows: 50% 20% 40%; /* 2 */
+        grid-template-areas:
+            "img1"
+            "title1"
+            "desc1";   
+    
+            justify-content: center;
+            align-items: flex-start;
+    }
 
 }
