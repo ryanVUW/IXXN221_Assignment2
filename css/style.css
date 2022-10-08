@@ -27,6 +27,13 @@ header{
     
 }
 
+p {
+    padding-left: 8px;
+    text-decoration: none;
+}
+
+
+
 .title{
     padding-left: 8px;
     background-color: #023E73;
@@ -41,7 +48,32 @@ header{
 .content{
     border: 0px solid #FDFDFD;
     border-radius: 16px;
+    text-decoration: underline;
 }
+
+.button{
+    background-color: #FDFDFD;
+    border: 2px solid #023E73;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.button:hover{
+    background-color: #023E73;
+    color:#FDFDFD;    
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    color: inherit;   
+}
+
+
 
 .home {
     grid-area: main;
@@ -161,24 +193,28 @@ header{
     flex-direction: column;
     margin: 0px;
     padding: 0px;
+    
 }
 
 .cartlist p{
     padding-left: 8px;
     margin:0px;
     font-size: 12px;
+    text-decoration: none;
 }
 
 .cartlist h2{
     font-size: 20px;
     text-align: center;
     color: #023E73;
+    text-decoration: none;
 }
 
 .cartlist h3{
     margin:0px;
     font-size: 16px;
     padding-left: 8px;
+    text-decoration: none;
 }
 
 .cartlist div:nth-of-type(1){
@@ -207,6 +243,52 @@ header{
 .cartlist div:nth-of-type(6){
     grid-area: img4;
 }
+
+.cart{
+    padding: 16px;
+    padding-right: 32px;
+    
+    background-color: #D9D9D9;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 50% 50%; /* 2 */
+    grid-template-rows: 72px auto auto; 
+    grid-template-areas:
+        "section1 section1"
+        "section2 section2"
+        "section3 section3";      
+}
+
+.cartinfo{
+    position: sticky;
+    bottom: 16px;
+    padding-right: 16px;
+    background-color: #D9D9D9;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 50% 50%; /* 2 */
+    grid-template-rows: 72px auto 72px; 
+    grid-template-areas:
+        "section1 section1"
+        "section2 section2"
+        "section3 section4"; 
+}
+
+.cartcomplete{
+    position: sticky;
+    bottom: 16px;
+    padding-right: 16px;
+    background-color: #D9D9D9;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 50% 50%; /* 2 */
+    grid-template-rows: 72px auto 72px; 
+    grid-template-areas:
+        "section1 section1"
+        "section2 section2"
+        "section3 section3"; 
+}
+
 
 img{
     max-width: 100%;
@@ -462,7 +544,7 @@ h1{
     }
     
     .cartlist{
-        margin-bottom: 16px;
+    
         background-color: #FDFDFD;
         border: 2px solid #023E73;
         border-radius: 16px;
@@ -474,8 +556,46 @@ h1{
             "img1 text1 img2 img4"
             " img1 text1 quant img4"
             " img1 text1 img3 img4";   
-    
-    
     }
+
+    .cart{
+
+        
+        background-color: #D9D9D9;
+        display: grid;
+        gap: 16px;
+        grid-template-columns: 20% 30% 30% 20%;
+        grid-template-rows: 72px auto auto; 
+        grid-template-areas:
+            "space1 section1 section3 space2"
+            "space1 section2 section3 space2"
+            "space1 section2 section3 space2";      
+    }
+    .cartinfo{
+        padding-right: 16px;
+        background-color: #D9D9D9;
+        display: grid;
+        gap: 16px;
+        grid-template-columns: 50% 50%; /* 2 */
+        grid-template-rows: 72px 30% 72px; 
+        grid-template-areas:
+            "section1 section1"
+            "section2 section2"
+            "section3 section4"; 
+    }
+
+    .cartcomplete{
+    
+        background-color: #D9D9D9;
+        display: grid;
+        gap: 16px;
+        grid-template-columns: 50% 50%; /* 2 */
+        grid-template-rows: 72px 30% 72px; 
+        grid-template-areas:
+            "section1 section1"
+            "section2 section2"
+            "section3 section3"; 
+    }
+
 
 }
