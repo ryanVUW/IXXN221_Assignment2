@@ -48,7 +48,7 @@ p {
 .content{
     border: 0px solid #FDFDFD;
     border-radius: 16px;
-    text-decoration: underline;
+    
 }
 
 .button{
@@ -63,13 +63,14 @@ p {
 .button:hover{
     background-color: #023E73;
     color:#FDFDFD;    
+    text-decoration: underline;
 }
 
 a{
     text-decoration: none;
 }
 
-a:visited{
+a:visited, a:link{
     color: inherit;   
 }
 
@@ -287,6 +288,62 @@ a:visited{
         "section1 section1"
         "section2 section2"
         "section3 section3"; 
+}
+
+
+
+.payment{
+    padding: 16px;
+    grid-gap: 16px;
+    background-color: #D9D9D9;
+    display: grid;
+    grid-template-columns: auto; /* 1 */
+    grid-template-rows: 312px auto; 
+    grid-template-areas:
+        "section1"
+        "section2";    
+}
+
+.card{
+    padding-right: 16px;
+    grid-gap: 16px;
+    background-color: #FDFDFD;
+    border: 0px solid #023E73;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: 50% 50%; 
+    grid-template-rows:  72px 64px 64px 64px;
+    grid-template-areas:
+        "section1 section1"
+        "card1 card1"
+        "card2 card2"
+        "card3 card4";        
+}
+
+.card div{
+    
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    background-color: #FDFDFD;
+    border: 2px solid #023E73;
+    border-radius: 16px;
+    margin: 0px;
+    padding: 0px;   
+}
+
+.card div:nth-of-type(1){
+    grid-area: card1;
+}
+.card div:nth-of-type(2){
+    grid-area: card2;
+}
+.card div:nth-of-type(3){
+    grid-area: card3;
+}
+.card div:nth-of-type(4){
+    grid-area: card4;
 }
 
 
@@ -596,6 +653,22 @@ h1{
             "section2 section2"
             "section3 section3"; 
     }
+
+    .payment{
+        margin: 0px;
+        padding: 0px;
+        padding-right: 72px;
+        padding-top: 32px;
+        padding-bottom: 64px;
+        gap: 24px;
+        background-color: #D9D9D9;
+        display: grid;
+        grid-template-columns: 20% 30% 30% 20%;
+        grid-template-rows:  auto;
+        grid-template-areas:
+            "space1 section1 section2 space2";    
+    }
+
 
 
 }
