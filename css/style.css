@@ -346,6 +346,78 @@ a:visited, a:link{
     grid-area: card4;
 }
 
+.ordersummary{
+    position: sticky;
+    bottom: 16px;
+    padding-right: 16px;
+    background-color: #D9D9D9;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 50% 50%; /* 2 */
+    grid-template-rows: 72px auto 72px; 
+    grid-template-areas:
+        "section1 section1"
+        "section2 section2"
+        "section3 section4"; 
+}
+
+.cartsummary{
+    margin-bottom: 16px;
+    background-color: #FDFDFD;
+    border: 2px solid #023E73;
+    border-radius: 16px;
+    padding: 8px;
+    display: grid;
+    grid-template-columns: 120px auto 32px; 
+    grid-template-rows: 32px auto 32px; 
+    grid-template-areas:
+        "img1 text1 img2"
+        "img1 text1 img2"
+        "img1 text1 img2";   
+
+}
+
+.cartsummary div{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+.cartsummary p{
+    padding-left: 8px;
+    margin:0px;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.cartsummary h3{
+    margin:0px;
+    font-size: 16px;
+    padding-left: 8px;
+    text-decoration: none;
+}
+
+.cartsummary div:nth-of-type(1){
+    grid-area: img1;
+}
+
+.cartsummary div:nth-of-type(2){
+    grid-area: text1;
+
+
+}
+
+.cartsummary div:nth-of-type(3){
+    grid-area: img2;
+
+}
+
+
+
 
 img{
     max-width: 100%;
@@ -669,6 +741,19 @@ h1{
             "space1 section1 section2 space2";    
     }
 
-
+    .ordersummary{
+        position: sticky;
+        bottom: 16px;
+        padding-right: 16px;
+        background-color: #D9D9D9;
+        display: grid;
+        gap: 16px;
+        grid-template-columns: 50% 50%; /* 2 */
+        grid-template-rows: 72px 30% 72px; 
+        grid-template-areas:
+            "section1 section1"
+            "section2 section2"
+            "section3 section4"; 
+    }
 
 }
