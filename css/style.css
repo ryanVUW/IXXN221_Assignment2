@@ -27,6 +27,22 @@ header{
     
 }
 
+.title{
+    padding-left: 8px;
+    background-color: #023E73;
+    border: 2px solid #023E73;
+    border-radius: 16px;
+    color:#FDFDFD;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.content{
+    border: 0px solid #FDFDFD;
+    border-radius: 16px;
+}
+
 .home {
     grid-area: main;
     padding: 16px;
@@ -69,7 +85,7 @@ header{
 .product{
     padding: 16px;
     grid-gap: 16px;
-    background-color: #FDFDFD;
+    background-color: #D9D9D9;
     display: grid;
     grid-template-columns: auto; /* 1 */
     grid-template-rows: 50% 40% 40%; /* 3 */
@@ -83,7 +99,7 @@ header{
     padding: 16px;
     padding-right: 32px;
     grid-gap: 16px;
-    background-color: #FDFDFD;
+    background-color: #D9D9D9;
     display: grid;
     grid-template-columns: 50% 50%; /* 2 */
     grid-template-rows: 72px auto auto; /* 3 */
@@ -108,12 +124,96 @@ header{
         align-items: flex-start;
 }
 
+.edit{
+    padding: 16px;
+    
+    background-color: #D9D9D9;
+    display: grid;
+    row-gap: 16px;
+    grid-template-columns:  0px 50% 50%; /* 2 */
+    grid-template-rows: 72px auto auto; /* 3 */
+    grid-template-areas:
+        "section1 section2 section2"
+        "section3 section4 section4"
+        "space1 space1 section5";  
+}
 
+.cartlist{
+    margin-bottom: 16px;
+    background-color: #FDFDFD;
+    border: 2px solid #023E73;
+    border-radius: 16px;
+    padding: 8px;
+    display: grid;
+    grid-template-columns: 120px auto 32px 32px; /* 2 */
+    grid-template-rows: 32px auto 32px; /* 2 */
+    grid-template-areas:
+        "img1 text1 img2 img4"
+        "img1 text1 quant img4"
+        "img1 text1 img3 img4";   
+
+}
+
+.cartlist div{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+}
+
+.cartlist p{
+    padding-left: 8px;
+    margin:0px;
+    font-size: 12px;
+}
+
+.cartlist h2{
+    font-size: 20px;
+    text-align: center;
+    color: #023E73;
+}
+
+.cartlist h3{
+    margin:0px;
+    font-size: 16px;
+    padding-left: 8px;
+}
+
+.cartlist div:nth-of-type(1){
+    grid-area: img1;
+}
+
+.cartlist div:nth-of-type(2){
+    grid-area: text1;
+
+
+}
+
+.cartlist div:nth-of-type(3){
+    grid-area: img2;
+
+}
+
+.cartlist div:nth-of-type(4){
+    grid-area: quant;
+}
+
+.cartlist div:nth-of-type(5){
+    grid-area: img3;
+}
+
+.cartlist div:nth-of-type(6){
+    grid-area: img4;
+}
 
 img{
     max-width: 100%;
     max-height: 100%;
+    
 }
+
 
 
 nav{
@@ -124,7 +224,7 @@ nav{
     align-items: center;
 }
 
-nav:nth-of-type(1){
+nav:nth-of-type(1){ /* Logo Image */
     grid-area: nav1;
     display: flex;
     justify-content: center;
@@ -133,6 +233,10 @@ nav:nth-of-type(1){
 
 nav:nth-of-type(2){
     grid-area: nav2;
+    padding-left: 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 nav:nth-of-type(3){
@@ -144,7 +248,7 @@ nav:nth-of-type(4){
 
 }
 
-nav:nth-of-type(5){
+nav:nth-of-type(5){ /* Search */
     grid-area: nav5;
     border: 2px solid #023E73;
     border-radius: 16px;
@@ -162,22 +266,22 @@ section{
 
 section:nth-of-type(1){
     grid-area: section1;
-    background-color: yellow;
+    
 }
 
 section:nth-of-type(2){
     grid-area: section2;
-    background-color: yellowgreen;
+    
 }
 
 section:nth-of-type(3){
     grid-area: section3;
-    background-color: green;
+    
 }
 
 section:nth-of-type(4){
     grid-area: section4;
-    background-color: orange;
+    
 }
 
 section:nth-of-type(5){
@@ -234,6 +338,13 @@ h1{
     color: #023E73;
     font-weight: 900;
 }
+
+
+
+
+
+
+
 
 @media screen and (min-width: 1024px) {
     
@@ -296,8 +407,6 @@ h1{
         padding-right: 72px;
         padding-top: 32px;
         gap: 24px;
-        
-        background-color: #FDFDFD;
         display: grid;
         grid-template-columns: 20% 30% 30% 20%;
         grid-template-rows: 60% 30%;
@@ -313,10 +422,9 @@ h1{
         padding-top: 32px;
         padding-bottom: 64px;
         gap: 24px;
-        background-color: #FDFDFD;
         display: grid;
         grid-template-columns: 20% 30% 30% 20%;
-        grid-template-rows: 5% auto;
+        grid-template-rows: 64px auto;
         grid-template-areas:
             "space1 section1 section2 space2"
             "space1 section3 section4 space2";       
@@ -335,6 +443,39 @@ h1{
     
             justify-content: center;
             align-items: flex-start;
+    }
+
+    .edit{
+        margin: 0px;
+        padding: 0px;
+        padding-right: 72px;
+        padding-top: 32px;
+        padding-bottom: 64px;
+        gap: 24px;
+        display: grid;
+        grid-template-columns: 20% 30% 30% 20%;
+        grid-template-rows: 64px auto 64px;
+        grid-template-areas:
+            "space1 section1 section2 space2"
+            "space1 section3 section4 space2"
+            "space1 section3 section5 space3"; ;  
+    }
+    
+    .cartlist{
+        margin-bottom: 16px;
+        background-color: #FDFDFD;
+        border: 2px solid #023E73;
+        border-radius: 16px;
+        padding: 8px;
+        display: grid;
+        grid-template-columns: 120px auto 32px 32px; /* 2 */
+        grid-template-rows: 32px auto 32px; /* 2 */
+        grid-template-areas:
+            "img1 text1 img2 img4"
+            " img1 text1 quant img4"
+            " img1 text1 img3 img4";   
+    
+    
     }
 
 }
