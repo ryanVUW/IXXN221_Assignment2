@@ -48,6 +48,16 @@ p {
 .content{
     border: 0px solid #FDFDFD;
     border-radius: 16px;
+ 
+    
+}
+
+.contentCentered{
+    border: 0px solid #FDFDFD;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -58,9 +68,22 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;    
+    text-align: center;
 }
 
-.button:hover{
+.buttonSmall{
+    font-size: 12px;
+    background-color: #FDFDFD;
+    border: 2px solid #023E73;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    text-align: center;
+}
+
+
+.button:hover, .buttonSmall:hover{
     background-color: #023E73;
     color:#FDFDFD;    
     text-decoration: underline;
@@ -109,12 +132,15 @@ a:visited, a:link{
 }
 
 .display{
+    
+    border: 0px solid #FDFDFD;
+    border-radius: 16px;
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 40px auto 40px;
     grid-template-rows: 90% 10%;
     grid-template-areas:
-        "img"
-        "div1";    
+        "left1 img right1"
+        "dots1 dots1 dots1";    
 }
 
 .display a{
@@ -125,17 +151,111 @@ a:visited, a:link{
     align-items: center; 
 }
 
+.display div:nth-of-type(1){
+    grid-area: left1;
+}
+.display div:nth-of-type(2){
+    grid-area: right1;
+}
+.display div:nth-of-type(3){
+    grid-area: dots1;
+}
 .product{
     padding: 16px;
     grid-gap: 16px;
     background-color: #D9D9D9;
     display: grid;
     grid-template-columns: auto; /* 1 */
-    grid-template-rows: 50% 40% 40%; /* 3 */
+    grid-template-rows: 30% auto auto; /* 3 */
     grid-template-areas:
         "section1"
         "section2"
         "section3";    
+}
+
+.productdesc{
+
+    border: 0px solid #023E73;
+    border-radius: 16px;
+    background-color: #FDFDFD;
+    display: grid;
+    grid-template-columns: 50% 50%; /* 1 */
+    grid-template-rows: 72px auto 72px; /* 3 */
+    grid-template-areas:
+        "title1 title1"
+        "desc1 desc1"
+        "price1 cart1"; 
+}
+
+.productdesc h2{
+    font-size: 35px;
+    text-align: center;
+    color: #023E73;
+}
+
+.productdesc div:nth-of-type(1){
+    grid-area: title1;
+}
+
+.productdesc div:nth-of-type(2){
+    grid-area: desc1;
+
+}
+
+.productdesc div:nth-of-type(3){
+    grid-area: price1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.productdesc div:nth-of-type(4){
+    grid-area: cart1;
+}
+
+.customerpurchased{
+    background-color: #D9D9D9;
+    gap:16px;
+    padding-right: 16px;
+    display: grid;
+    grid-template-columns: 50% 50%; /* 1 */
+    grid-template-rows: 72px auto auto; /* 2 */
+    grid-template-areas:
+        "section1 section1"
+        "section2 section3"
+        "section4 section5";    
+}
+
+.suggestlist{
+    border: 0px solid #023E73;
+    border-radius: 16px;
+    background-color: #FDFDFD;
+    row-gap: 4px;
+    display: grid;
+    grid-template-columns: 50% 50%; /* 1 */
+    grid-template-rows: auto auto 54px; /* 3 */
+    grid-template-areas:
+        "img1 img1"
+        "title1 title1"
+        "view1 cart1";    
+}
+
+.suggestlist div:nth-of-type(1){
+    grid-area: img1;
+}
+
+.suggestlist div:nth-of-type(2){
+    grid-area: title1;
+
+}
+
+.suggestlist div:nth-of-type(3){
+    grid-area: view1;
+
+}
+
+.suggestlist div:nth-of-type(4){
+    grid-area: cart1;
 }
 
 .recomm {
@@ -659,14 +779,7 @@ h1{
             "space1 section2 section3 space2";
     }
     
-    .display{
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: 90% 10%;
-        grid-template-areas:
-            "img"
-            "div1";    
-    }
+
 
     .product{
         margin: 0px;
@@ -676,10 +789,23 @@ h1{
         gap: 24px;
         display: grid;
         grid-template-columns: 20% 30% 30% 20%;
-        grid-template-rows: 60% 30%;
+        grid-template-rows: 50% auto;
         grid-template-areas:
             "space1 section1 section2 space2"
             "space1 section3 section3 space2"; 
+    }
+
+    .customerpurchased{
+        background-color: #D9D9D9;
+        gap:16px;
+        padding-right: 16px;
+        padding-bottom: 32px;
+        display: grid;
+        grid-template-columns: repeat(4, 25%); /* 1 */
+        grid-template-rows: 72px auto; /* 2 */
+        grid-template-areas:
+            "section1 section1 section1 section1"
+            "section2 section3 section4 section5";    
     }
 
     .recomm {
