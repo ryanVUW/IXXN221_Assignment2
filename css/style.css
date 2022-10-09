@@ -461,6 +461,57 @@ a:visited, a:link{
 
 }
 
+.register{
+    padding: 16px;
+    grid-gap: 16px;
+    background-color: #D9D9D9;
+    display: grid;
+    grid-template-columns: auto; /* 1 */
+    grid-template-rows: 400px; 
+    grid-template-areas:
+        "section1";    
+}
+
+.login{
+    padding-right: 16px;
+    grid-gap: 16px;
+    background-color: #FDFDFD;
+    border: 0px solid #023E73;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: 50% 50%; 
+    grid-template-rows:  72px 64px 64px 64px 72px;
+    grid-template-areas:
+        "section1 section1"
+        "card1 card1"
+        "card2 card2"
+        "card3 card3"
+        "section2 section2";        
+}
+
+.login div{
+    
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    background-color: #FDFDFD;
+    border: 2px solid #023E73;
+    border-radius: 16px;
+    margin: 0px;
+    padding: 0px;   
+}
+
+.login div:nth-of-type(1){
+    grid-area: card1;
+}
+.login div:nth-of-type(2){
+    grid-area: card2;
+}
+.login div:nth-of-type(3){
+    grid-area: card3;
+}
+
 
 
 
@@ -542,53 +593,13 @@ section:nth-of-type(4){
 
 section:nth-of-type(5){
     grid-area: section5;
-    background-color: orangered;
 }
 
 section:nth-of-type(6){
     grid-area: section6;
-    background-color: tomato;
 }
 
-section:nth-of-type(7){
-    grid-area: section7;
-    background-color: indianred;
-}
 
-section:nth-of-type(8){
-    grid-area: section8;
-    background-color: coral;
-}
-
-section:nth-of-type(9){
-    grid-area: section9;
-    background-color: pink;
-}
-
-section:nth-of-type(10){
-    grid-area: section10;
-    background-color: orchid;
-}
-
-section:nth-of-type(11){
-    grid-area: section11;
-    background-color: magenta;
-}
-
-section:nth-of-type(12){
-    grid-area: section12;
-    background-color: purple;
-}
-
-section:nth-of-type(13){
-    grid-area: section13;
-    background-color: darkorchid;
-}
-
-section:nth-of-type(14){
-    grid-area: section14;
-    background-color: plum;
-}
 
 h1{
     color: #023E73;
@@ -787,4 +798,17 @@ h1{
             "section3 section4"; 
     }
 
+    .register{
+        margin: 0px;
+        padding: 0px;
+        padding-right: 48px;
+        padding-top: 32px;
+        padding-bottom: 64px;
+        gap: 24px;
+        display: grid;
+        grid-template-columns: 35% 30% 35%;
+        grid-template-rows: 400px;
+        grid-template-areas:
+            "space1 section1 space2";
+    }
 }
