@@ -331,12 +331,12 @@ a:visited, a:link{
     background-color: #D9D9D9;
     display: grid;
     row-gap: 16px;
-    grid-template-columns:  0px 50% 50%; /* 2 */
+    grid-template-columns:  50% 50%; /* 2 */
     grid-template-rows: 72px auto auto; /* 3 */
     grid-template-areas:
-        "section1 section2 section2"
-        "section3 section4 section4"
-        "space1 space1 section5";  
+        "section1 section1"
+        "section2 section2"
+        "section3 section3";  
 }
 
 .cartlist{
@@ -773,7 +773,7 @@ h1{
         grid-area: main;
         display: grid;
         grid-template-columns: 20% 30% 30% 20%;
-        grid-template-rows: 70% auto;
+        grid-template-rows: 70% 10%;
         grid-template-areas:
             "space1 section1 section1 space2"
             "space1 section2 section3 space2";
@@ -832,14 +832,16 @@ h1{
         padding-bottom: 64px;
         gap: 24px;
         display: grid;
-        grid-template-columns: 20% 30% 30% 20%;
+        grid-template-columns: 35% 30% 35%;
         grid-template-rows: 64px auto 64px;
         grid-template-areas:
-            "space1 section1 section2 space2"
-            "space1 section3 section4 space2"
-            "space1 section3 section5 space3"; ;  
+            "space1 section1  space2"
+            "space1 section2  space2"
+            "space1 section3  space3"; ;  
     }
     
+
+
     .cartlist{
     
         background-color: #FDFDFD;
