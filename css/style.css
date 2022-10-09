@@ -33,7 +33,6 @@ p {
 }
 
 
-
 .title{
     padding-left: 8px;
     background-color: #023E73;
@@ -59,6 +58,11 @@ p {
     justify-content: center;
     align-items: center;
     
+}
+
+
+.content h3{
+    padding-left: 8px;
 }
 
 .button{
@@ -290,13 +294,28 @@ a:visited, a:link{
         "custom1 cart1";   
 }
 
-.list img{
+.listreviews{
+    margin-bottom: 16px;
+    background-color: #FDFDFD;
+    border: 2px solid #023E73;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: 50% 50%; /* 2 */
+    grid-template-rows: auto 72px auto 69px; 
+    grid-template-areas:
+        "img1 img1"
+        "title1 title1"
+        "desc1 desc1"
+        "custom1 cart1";   
+}
+
+.list img, .listreviews img{
     width: 300px;
 }
 
 
 
-.list div:nth-of-type(1){
+.list div:nth-of-type(1), .listreviews div:nth-of-type(1){
     grid-area: img1;
     display: flex;
     justify-content: center;
@@ -305,22 +324,22 @@ a:visited, a:link{
     padding: 0px;
 }
 
-.list div:nth-of-type(2){
+.list div:nth-of-type(2), .listreviews div:nth-of-type(2){
     grid-area: title1;
 
 
 }
 
-.list div:nth-of-type(3){
+.list div:nth-of-type(3), .listreviews div:nth-of-type(3){
     grid-area: desc1;
 
 }
 
-.list div:nth-of-type(4){
+.list div:nth-of-type(4), .listreviews div:nth-of-type(4) {
     grid-area: custom1;
 }
 
-.list div:nth-of-type(5){
+.list div:nth-of-type(5), .listreviews div:nth-of-type(5){
     grid-area: cart1;
 }
 
@@ -823,6 +842,21 @@ h1{
             "space1 section3 section4 space2";       
     }
     
+    .listreviews{
+        margin-bottom: 16px;
+        background-color: #FDFDFD;
+        border: 2px solid #023E73;
+        border-radius: 16px;
+        display: grid;
+        grid-template-columns: 50% 50%; /* 2 */
+        grid-template-rows: auto auto 316px 69px; 
+        grid-template-areas:
+            "img1 img1"
+            "title1 title1"
+            "desc1 desc1"
+            "custom1 cart1";   
+    }
+
 
     .edit{
         margin: 0px;
